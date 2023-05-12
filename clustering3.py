@@ -11,7 +11,6 @@ data['COUNTRY_EN'] = label_encoder.fit_transform(data['COUNTRY_EN'])
 
 X = data[['SEGMENT_NAME', 'COUNTRY_EN']].values
 
-# Scale the data to have maximum value of 100 for both axes
 scaler = MinMaxScaler(feature_range=(0, 100))
 X_scaled = scaler.fit_transform(X)
 
